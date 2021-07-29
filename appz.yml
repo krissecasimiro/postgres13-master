@@ -1,7 +1,7 @@
 app:
     name: Postgres Master
     code: POSTGRES
-    notify: appz@ecloudcontrol.com
+    notify: krisse.casimiro@adapt-me.com
     
 build:
     version: 13.X
@@ -11,7 +11,7 @@ build:
     image_template: postgres_master-13.3
     
 deploy:
-    context: alpha/DEV
+    context: krissecasimiro/DEV
     type: statefulset
     replicas: 1
     port:
@@ -39,7 +39,7 @@ properties:
           vault: POSTGRESQL_SPRINGBOOTWEB_PASSWORD
     PGPASSWORD: 
       vault: PGPASSWORD
-    revision : 76
+    revision : 77
 
     #WebDav Setup
     PUSH_BACKUP_WEBDAV: False
